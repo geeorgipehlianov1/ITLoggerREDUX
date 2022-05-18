@@ -32,11 +32,20 @@ export const getLogs = () => async (dispatch) => {
   }
 };
 
-export const addLog = () => async (dispatch) => {
+export const addLog = (log) => async (dispatch) => {
     try {
       const res = await fetch('/logs', {
-        method: 'post',
-        
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(log)
+      })
+      const data = await res.json();
+
+      dispatch({
+        type: ADD_LOG,
+        payload: data
       })
     } catch(err) {
       dispatch({
