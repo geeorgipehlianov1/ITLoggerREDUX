@@ -3,12 +3,13 @@ import { useEffect } from "react";
 import { connect } from 'react-redux';
 import { LogItem } from "./LogItem";
 import Preloader from "../layout/Preloader";
-import {getLogs} from '../../actions/LogActions';
+import { getLogs } from '../../actions/LogActions';
 
-const Logs = ({ log: { logs, loading } }) => {
+const Logs = ({ log: { logs, loading }, getLogs }) => {
   
     useEffect(() => {
-      getLogs()
+      getLogs();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   if(loading || logs === null) {
@@ -30,4 +31,4 @@ const mapStateToProps = (state) => ({
     log: state.log
 })
 
-export default connect(mapStateToProps, {getLogs})(Logs);
+export default connect(mapStateToProps, { getLogs })(Logs);
