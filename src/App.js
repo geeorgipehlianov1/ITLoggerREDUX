@@ -20,7 +20,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <>
-        {/* <Searchbar store={store} /> */}
+        <Searchbar store={store} />
         <div className="container">
           <AddBtn />
           <AddLogModal />
