@@ -7,7 +7,7 @@ import TechItem from "./TechItem";
 const TechsListModal = ({getTechs, tech: {techs, loading}}) => {
 
     useEffect(() => {
-    getTechs();
+    getTechs(techs);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
