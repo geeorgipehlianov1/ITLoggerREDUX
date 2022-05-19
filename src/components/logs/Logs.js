@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { connect } from 'react-redux';
-import { LogItem } from "./LogItem";
+import LogItem from "./LogItem";
 import Preloader from "../layout/Preloader";
 import { getLogs } from '../../actions/LogActions';
 
