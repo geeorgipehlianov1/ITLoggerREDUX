@@ -19,5 +19,21 @@
       "id": 5
     }
   ],
-  "techs": []
+  "techs": [
+    {
+      "firstName": "Sam ",
+      "lastName": "Smith",
+      "id": 2
+    },
+    {
+      "firstName": "John ",
+      "lastName": "Doe",
+      "id": 3
+    },
+    {
+      "firstName": "Sara",
+      "lastName": "Smith",
+      "id": 4
+    }
+  ]
 }
